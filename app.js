@@ -20,6 +20,15 @@ class Customer {
       fullName.style.borderColor = 'red'; 
       return;
     }
+
+    const Email = document.getElementById("Email").value;
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  if (!emailRegex.test(email)) {
+    alert('Please enter a valid email address.');
+    Email.style.borderColor = 'red'; 
+    event.preventDefault();
+  }
     
     const password = document.getElementById('password').value;
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{9,}$/;
